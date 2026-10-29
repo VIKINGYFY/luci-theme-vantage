@@ -2432,7 +2432,8 @@ html:not([data-darkmode="true"]) .vt-login-page {
 .cbi-section-table-row:has(> .td[data-name="_stat"] big):first-child > .td { border-top: 0; }
 .cbi-section-table-row:not(:has(big)) > .td[data-name="_badge"] { padding-left: calc(var(--card-px) + 16px); }
 
-/* Keep the label in flow so larger browser fonts cannot overlap the heading. */
+/* progress bars: thin track, value text above it and in flow, so larger
+   browser fonts cannot run into the heading */
 .cbi-progressbar {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
@@ -2448,7 +2449,7 @@ html:not([data-darkmode="true"]) .vt-login-page {
 	position: static; inset: auto; padding: 0;
 	display: block;
 	color: var(--text-2);
-	font: inherit; line-height: normal;
+	font: 500 var(--fs-micro)/1.2 var(--mono);
 	white-space: normal; overflow-wrap: anywhere;
 }
 .cbi-progressbar::after { content: ""; grid-area: 2 / 1; height: 6px; border-radius: 3px; background: var(--s3); }
